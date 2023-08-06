@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="google-site-verification" content="ksk1tM80H_prwwO68av_7YYhXP648kIhyFcyM75IOf0" />
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jasmine Matemática</title>
+    <link rel="stylesheet" href="style.css"/>
+    <style>
+      
+      /*Visivel na posição porta retrato*/
+       @media only screen and (orientation: portrait){
+        #instrucao{display: block;}
+        #instrucao2{display: block;}
+        #start_button {display: none; }
+        #nome {display: none; }
+        #Tela_Recorde {display: none; }
+        #salvar {display: none; }
+        #jogadores {display: none; }
+        }
+
+        /*Visivel na posição paisagem*/
+
+        @media only screen and (orientation: landscape){
+            #start {display: block; }
+            #instrucao{display: none;}
+            #instrucao2{display: none;}
+        }
+
+    </style>
+</head>
+<body>
+    <!--Tela No formato porta retrato-->
+    <h1 id="Tela_Recorde">Tela de Recorde</h1>
+   <div id="lista_recorde">
+            <ol id="jogadores">
+            </ol>
+    </div>
+    
+    
+    <input type="text" id="nome" placeholder="Digite um nome" maxlength="10">
+  
+    <button id="salvar" onclick="saveTransaction()">Salvar</button>
+ 
+    <a href="index2.html"><button id="start_button">Clique aqui para Voltar</button> </a>
+
+
+<div id = "instrucao" class="instrucao">
+    <header>
+        
+        <h1>Tela de Recorde</h1>      
+        <br>
+        <h2>Por favor, Gire o celular.</h2>
+    </header>
+    <div class ="corpo-modal">
+        
+    </div> 
+ </div>
+
+<div id = "instrucao2" class="instrucao2">
+<div class ="superior"></div>
+</div>
+<script src="https://www.gstatic.com/firebasejs/9.13.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.13.0/firebase-auth-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.13.0/firebase-firestore-compat.js"></script>
+<script src="firebase-init.js"></script>
+<script src="recorde.js"></script>
+</body>
+</html>

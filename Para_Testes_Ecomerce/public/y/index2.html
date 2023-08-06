@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jasmine Matemática</title>
+    <link rel="stylesheet" href="style.css"/>
+
+
+    <style>
+        /*Visivel na posição porta retrato*/
+         @media only screen and (orientation: portrait){
+              /*#retrato { display: block;}*/
+              #canvas1 {display: none; }
+              #score {display: none;}
+              #score_fixo {display: none;}
+              #sair {display: none}
+              #fullScreenButton {display: none;}
+              #mute{display: none;}
+              #instrucao {display: block;}
+              #tela4 {display: block;}
+              #tela3 {display: block;}
+              #tela2 {display: block;}
+              #tela {display: block;}
+          }
+  
+          /*Visivel na posição paisagem*/ 
+          @media only screen and (orientation: landscape){
+              #canvas1 { display: block;}
+              #mute{display: block;}
+              #instrucao {display: none;}
+              #instrucao2 {display: none;}
+          }
+  
+      </style>
+
+</head>
+<body>
+    
+    <canvas id="canvas1"></canvas>
+    <img id="playerImage" src="player.png">
+    <img id="backgroundImage" src="SC.jpg">
+    <img id="enemyImage" src="enemy.png">
+    
+<!--Botões e Valores da tela-->
+
+    <button id='fullScreenButton'>Iniciar</button>
+    
+    <button id='sair'>Sair</button>
+    
+    <button id='score'></button>
+    
+    <button id='score_fixo'>Pontos:</button> 
+  
+<!--Tela a ser exibida com a primeira questão e será incrementada com todas as demais questões-->
+
+<div id = " Tela" class="modal">
+        <header>
+            <h4 id = "Questoes">Questão 01</h4>                
+        </header>
+        <div id ="corpo-modal">
+            <p></p> 
+            
+        </div>
+        <footer>
+            <button id = "ou" class= "ou">OU</button>
+        </footer>
+        </div>
+
+    
+<!--Tela a ser exibida Ao acertar a questão -->
+        
+    <div id = " Tela2" class="modal2">
+            <header>
+                <h1>PARABÉNS! VOCÊ ACERTOU!</h1>
+                
+            </header>
+            <div class ="corpo-modal">
+                <h2>Receba 20 pontos!</h2>
+            </div>
+            
+            </div>
+
+<!--Tela a ser exibida Ao Errar a questão -->
+        
+<div id = " Tela4" class="modal4">
+    <header>
+        <h1>QUE PENA VOCÊ ERROU</h1>
+        
+    </header>
+       
+    </div>
+
+<!--Tela a ser exibida no Fim do Jogo -->
+            
+        <div id = "Tela3" class="modal3">
+                <header>
+                    <h1>Toque na tela e deslize para baixo para recomeçar! para PC pressione Enter</h1> <br>
+                    <h2>Deseja salvar seu recorde?</h2>
+                      
+                </header>
+                <footer>
+                    <button id='sim'>Sim</button>
+                    <button id="nao">Não</button>
+                </footer>
+                <div class ="corpo-modal">
+                    
+                </div>
+               
+        </div>
+      
+        <!--Tela orientando o usuário girar o telefone -->
+            
+        <div id = "instrucao" class="instrucao">
+            <header>
+                
+                <h1>Jasmine está perdida !</h1>
+                <br>
+                <h2>Use a matemática para encontrá-la.</h2>
+                <br>
+                <h2>Por favor, Gire o celular.</h2>
+            </header>
+            <div class ="corpo-modal">
+                
+            </div> 
+         </div>
+
+    <div id = "instrucao2" class="instrucao2">
+        <div class ="superior"></div>
+    </div>
+            <!--Botões de resposta - não consegui botar dentro da DIV-->
+            <button id = "botaoCerto" class= "botaoCerto">20</button>
+            <button id = "botaoErrado" class= "botaoErrado">10</button>
+
+    <audio id="myAudio">
+        <source src = 'topgear.mp3' type = 'audio/mpeg'>
+        seu navegador não possui suporte ao elemento  audio
+    </audio>
+
+    <audio id="audio_jump">
+        <source src = 'jump.mp3' type = 'audio/mpeg'>
+        seu navegador não possui suporte ao elemento  audio
+    </audio>
+
+    <button id="mute"></button>
+   
+    <script src="script.js"></script>
+  
+</body>
+</html>

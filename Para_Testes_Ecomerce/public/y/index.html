@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="google-site-verification" content="ksk1tM80H_prwwO68av_7YYhXP648kIhyFcyM75IOf0" />
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jasmine Matemática</title>
+    <link rel="stylesheet" href="style.css"/>
+    <style>
+      
+      /*Visivel na posição porta retrato*/
+       @media only screen and (orientation: portrait){
+        #instrucao{display: block;}
+        #instrucao2{display: block;}
+        #start {display: none; }
+        }
+
+        /*Visivel na posição paisagem*/
+
+        @media only screen and (orientation: landscape){
+            #start {display: block; }
+            #instrucao{display: none;}
+            #instrucao2{display: none;}
+        }
+
+    </style>
+</head>
+<body>
+    
+<!--Orientação para girar a tela -->
+
+<div id = "start">    
+    <h1 id="comandos">Teste alteração código Jasmine----------</h1>
+    <h2 id="comandos2">No Smartphone/celular: Deslize o dedo na tela para cima para pular e para os lados para avançar ou recuar.</h2>
+    <h2 id="comandos3">No Computador: Utilize as teclas direcionais do teclado.</h2>
+    <a href="index2.html"><button id="start_button">Clique aqui para começar!</button> </a>
+</div>
+
+<div id = "instrucao" class="instrucao">
+    <header>
+        
+        <h1>Jasmine está perdida !</h1>
+        <br>
+        <h2>Use a matemática para encontrá-la.</h2>
+        <br>
+        <h2>Por favor, Gire o celular.</h2>
+    </header>
+    <div class ="corpo-modal">
+        
+    </div> 
+ </div>
+
+<div id = "instrucao2" class="instrucao2">
+<div class ="superior"></div>
+</div>
+
+</body>
+</html>
