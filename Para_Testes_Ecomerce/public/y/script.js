@@ -34,7 +34,7 @@ window.addEventListener('load', function(){
         if (press_mute){
             
             x.play();
-            x.volume = 0.05;
+            x.volume = 0.06;
         }
         else
         {
